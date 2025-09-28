@@ -1,0 +1,5 @@
+
+{
+  "name": "Training Attendance Record",
+  "description": "A modern web application to record attendance for training sessions, including participant details and digital signatures. Records can be viewed in a table and exported to CSV."
+}
