@@ -90,7 +90,7 @@
           if (event instanceof MouseEvent) {
             return { x: event.clientX - rect.left, y: event.clientY - rect.top };
           }
-          if (event.touches.length > 0) {
+          if (event.touches && event.touches.length > 0) {
             return { x: event.touches[0].clientX - rect.left, y: event.touches[0].clientY - rect.top };
           }
           return null;
@@ -476,3 +476,13 @@
       if (!rootElement) {
         throw new Error("Could not find root element to mount to");
       }
+
+      const root = ReactDOM.createRoot(rootElement);
+      root.render(
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      );
+    </script>
+  </body>
+</html>
